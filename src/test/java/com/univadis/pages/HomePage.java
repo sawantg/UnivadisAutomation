@@ -13,12 +13,13 @@ public class HomePage {
 	 */
 	private final By LOGIN_LINK = By.linkText("Login");
 	private final By SIGN_UP_LINK = By.linkText("Sign up free");
+	private final By ONCOLOGY_LINK = By.linkText("Oncology");
 	private WebDriver driver;
 	private WebDriverWait wait;
 
 	public HomePage(WebDriver wd) {
 		driver = wd;
-		wait = new WebDriverWait(driver, 20);
+		wait = new WebDriverWait(driver, 30);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -30,6 +31,14 @@ public class HomePage {
 
 	public void goToSignUpPage() {
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(SIGN_UP_LINK))).click();
+	}
+	
+	public LoginPage goToOncology() { // Page Class MEthods should return Page Objects ONLY
+		wait.until(ExpectedConditions.visibilityOf(driver.findElement(ONCOLOGY_LINK))).click();
+		
+		
+		LoginPage loginPage = new LoginPage(driver);// Class Loaded into the memory, Class variables intialization,
+		return loginPage; // Constructor is called
 	}
 
 }

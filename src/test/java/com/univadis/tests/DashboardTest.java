@@ -18,7 +18,7 @@ import com.univadis.pages.DashBoardPage;
 import com.univadis.pages.HomePage;
 import com.univadis.pages.LoginPage;
 
-public class LoginTest {
+public class DashboardTest {
 	WebDriver driver; // null
 	Properties prop; // null
 	HomePage homePage; // null
@@ -36,8 +36,8 @@ public class LoginTest {
 		loginPage = homePage.goToLoginPage();
 	}
 
-	@Test(testName = "LoginTest", description = "Verify whether the user is able to login into the univadis.co.uk")
-	public void verifyLoginTest() throws InterruptedException {
+	@Test(testName = "EmailTest", description = "Verify whether the email is working")
+	public void verifyEmailTest() throws InterruptedException {
 
 		DashBoardPage dashBoardPage = loginPage.doLogin(prop.getProperty("USERNAME"), prop.getProperty("PASSWORD"));
 		Assert.assertEquals(dashBoardPage.getUserName(), prop.getProperty("EXPECTED_USERNAME"));

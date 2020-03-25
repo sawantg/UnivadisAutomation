@@ -18,7 +18,7 @@ public class LoginPage {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; // this keyword is used to differentiate between class variable and method
 								// variable when both class variable and method variable have same name!!
-		wait = new WebDriverWait(driver, 20);
+		wait = new WebDriverWait(driver, 30);
 
 	}
 

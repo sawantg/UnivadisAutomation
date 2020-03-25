@@ -23,4 +23,9 @@ public class DashBoardPage {
 		return userName;
 	}
 
+	public void gotoHeadlinePage() {
+		driver.get("https://www.univadis.co.uk/news/all/oncology/");
+		
+	}
+	
 }
